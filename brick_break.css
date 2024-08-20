@@ -1,0 +1,275 @@
+#Story-container{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#storyvideo{
+    border: 30px solid black;
+}
+#story{
+    border: 30px solid black;
+    margin-top: 30px;
+}
+#skip-button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+* {
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    margin:0px; padding: 0px;
+}
+div{
+    display: flex;
+}
+html{
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-image: url('img/main_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* 시작 화면 */
+#Start-screen{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    outline: none;
+    display: block;
+    position: relative;
+    width: 150px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
+    color: #FFF;
+    border-width: 0px;
+    border-radius: 5px;
+    transition: all 0.5s ;
+    background: #FF8E00;
+    box-shadow: 0px 8px 0px 0px #A66615;
+    margin-bottom: 15px
+}
+button:hover {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    box-shadow: 0px 0px 0px 0px #A66615;
+}
+
+#title_img{
+    width:350px
+}
+
+/* 난이도 고르는 화면 */
+#Start-game {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#Start-game > button {
+    width: 200px;
+    line-height: 300px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* 스토리 다시보기 화면 */
+#Story-play {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+#Story-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+#Story-video {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+#video{
+    margin-top: 50px;
+    width: 80%;
+}
+
+/* 설정 화면 */
+#Setting-screen {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+#Setting-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+#Setting-button > button {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#Setting-character>img{
+    margin: 40px 40px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(95%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+#Setting-character>img:hover{
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+#character-name{
+    margin-top: 220px;
+    margin-bottom: 50px;
+}
+
+#Setting-Ball{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#reset_ball{
+    margin-top: 170px;
+    margin-bottom: 10px;
+}
+#reset_ball:hover{
+    margin-top: 175px;
+    margin-bottom: 5px;
+}
+#speed_plus{
+    width: 50px; height: 50px;
+    margin: 0px 80px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    
+}
+#speed_minus{
+    width: 50px; height: 50px;
+    margin: 0px 80px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+#speed_status{
+    display: block;
+    width: 100px; height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0px 80px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+#size_plus{
+    width: 50px; height: 50px;
+    margin: 0px 80px;
+    margin-top: 5px;
+}
+#size_minus{
+    width: 50px; height: 50px;
+    margin: 0px 80px;
+    margin-top: 5px;
+}
+#size_status{
+    display: block;
+    width: 100px; height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0px 80px;
+    margin-top: 5px;
+}
+
+#test_canvas{
+    
+    width: 500px; height: 150px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 0px gray;
+}
+#sound_o {
+    margin-top:200px;
+    width:200px; height: 200px;
+}
+#sound_x {
+    margin-top:200px;
+    width:200px; height: 200px;
+}
+
+
+
+
+
+
+#gameOver{
+    display: none;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+}
+#gameClear{
+    display: none;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+}
+#levelClear{
+    display: none;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+}
+#gameOver{
+    flex-direction: column;
+}
+#levelClear{
+    flex-direction: column;
+}
+#gameClear{
+    flex-direction: column;
+}
+
+#myCanvas {
+    position: relative;
+    z-index: 0;
+}
+ 

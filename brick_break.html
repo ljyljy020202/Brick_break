@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="brick_break.js"></script>
+    <link type="text/css" rel = "stylesheet" href="brick_break.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<head>
+</head>
+<body>
+    <div id="Story-container">
+     <video id="storyvideo" src="Story video.mp4" controls></video>
+    </div>
+    <div id ="skip-button" >
+        <button onclick="Skip()">Skip</button>
+    </div>
+    <div id="Start-screen" class="Screen" style="display:none">
+        <img src="img\logo.png" id="title_img">
+        <button onclick="StartGame()">PLAY</button></br>
+        <button onclick="Storyplay()">STORY</button></br>
+        <button onclick="Setting()">OPTION</button></br>
+        <button onclick="window.close()">EXIT</button></br>
+    </div> 
+    <div id="Start-game" class="Screen" style="display:none">
+        <button onclick="Easy()">LEVEL 1</button></br>
+        <button onclick="Normal()">LEVEL 2</button></br>
+        <button onclick="Hard()">LEVEL 3</button></br>
+        <button onclick="Backtomain()">BACK</button>
+    </div>
+    <div id="Story-play" class="Screen" style="display:none">
+        <div id="Story-button">
+            <button onclick="Backtomain3()">BACK</button>
+        </div>
+        <div id="Story-video">
+            <video id="story" src="Story video.mp4" autoplay></video>
+        </div>
+    </div>
+    <div id="Setting-screen" class="Screen" style="display:none">
+        <div id="Setting-button">
+            <button onclick="select_bird()">Select Bird</button></br>
+            <button onclick="setting_ball()">Setting Ball</button></br>
+            <button onclick="setting_sound()">Setting Sound</button></br>
+            <button onclick="Backtomain2()">BACK</button>
+        </div>
+        <img src="img\red.png" id="character-name">
+        <div id="Setting-character">
+            <img src="img/character1.png" id="red" width="200">
+            <img src="img/character2.png" id="bomb" width="200">
+            <img src="img/character3.png" id="matilda" width="200">
+        </div>
+        <div id="Setting-Ball" style="display:none">
+                <div>
+                    <button id="reset_ball" onclick="reset_ball()">Reset</button>
+                </div>
+                <div>
+                    <img src="img/minus.png" id="speed_minus">
+                    <div id="speed_status"></div>
+                    <img src="img/plus.png" id="speed_plus">
+                </div>
+                <canvas id="test_canvas" style="background-color: #eee;" width="500"></canvas>
+                <div>
+                    <img src="img/minus.png" id="size_minus">
+                    <div id="size_status"></div>
+                    <img src="img/plus.png"  id="size_plus">
+                </div>
+        </div>
+        <div id="Setting-sound" style="display:none">
+                <img src="img/sound_o.png" id="sound_o">
+                <img src="img/sound_x.png" id="sound_x" style="display: none;">
+        </div>
+    </div>
+    <div id = "Game-Screen" style = "display: none;">
+        <canvas id = "myCanvas"></canvas>
+        <div id = "gameOver">
+            Game Over
+            <button id="replay">Replay</button>
+            <button class="Menu">Menu</button>
+        </div>
+        <div id ="levelClear">
+            Level Clear
+            <button id ="nextLevel">Next Level</button>
+            <button class ="Menu">Menu</button>
+        </div>
+        <div id ="gameClear">
+            Game Clear
+            <button class = "Menu">Menu</button>
+        </div>
+    </div>
+</body>
+</html>
